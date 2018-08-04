@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Flower</title>
+</head>
+<style>
+
+</style>
+<body>
+
+<canvas id="my" width="600" height="600"></canvas>
+
+<script>
+
+  var canvas = document.getElementById('my');
+  let ctx = canvas.getContext("2d");
+
+  var NUM = 400;
+
+  var radius = 100;
+
+  var centerX = 300;
+  var centerY = 300;
+  var VarRadius,x,y,teta;
+
+
+  function DrawCircle(radius,color,offset){
+    ctx.fillStyle = color;
+    ctx.beginPath();
+    for (var i = 0; i <= NUM; i++) {
+      teta = i*2*Math.PI/NUM;
+      VarRadius = radius + 70*Math.cos(teta*13 + offset);
+      x = centerX + VarRadius*Math.cos(teta);
+      y = centerY + VarRadius*Math.sin(teta);
+
+      if(i===0){ctx.moveTo(x,y)}
+      else{
+        ctx.lineTo(x,y);
+      }
+    }
+    ctx.closePath();
+    // ctx.stroke();
+    ctx.fill();
+  }
+  
+
+
+  var time = 0;
+  function Draw() {
+    time++;
+    ctx.clearRect(0,0,600,600);
+
+    for (var i = 0; i < 10; i++) {
+      var color = (i%2)?'black':'white';
+      DrawCircle(
+        200-i*10,
+        // 'rgba(0,0,0,'+i/10+')',
+        color,
+        i + i*time/100
+      )
+    }
+  }
+
+  function render() {
+    Draw();
+    window.requestAnimationFrame(render);
+  }
+  render();
+
+</script>
+</body>
+</html>

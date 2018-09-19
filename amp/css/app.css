@@ -66,8 +66,7 @@ body {
 
 button {
   background: none;
-  border: none;
-  margin-left: 100px; }
+  border: none; }
 
 .i-amphtml-element > [overflow] {
   margin-top: 0px; }

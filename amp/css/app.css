@@ -144,17 +144,15 @@ button {
     margin-top: auto; }
 
 .content {
+  max-width: 700px;
+  margin: 0 auto;
   padding: 10px; }
 
-.img img {
-  display: block;
-  width: 100%; }
-
-.img_top {
-  border: 1px solid #D2D4DB;
-  padding: 10px;
-  background: #fff;
-  margin-bottom: 10px; }
+.interesting {
+  padding: 20px;
+  background: #eee; }
+  .interesting__title {
+    text-align: center; }
 
 .postlist [role=list] {
   display: -webkit-box;

@@ -139,34 +139,49 @@
 
       <div class="postlist">
 
-        <!-- <div class="news__media">
-          <amp-youtube width="480"
-            height="270"
-            layout="responsive"
-            data-videoid="OEsOnYW6tTw">
-          </amp-youtube>
-        </div> -->
-
         <amp-list width="auto"
-          height="100"
+          height="200"
           layout="fixed-height"
           src="js/amp-list.json">
           <template type="amp-mustache">
             <div>
-              <amp-youtube width="480" height="270" layout="responsive"
-                data-videoid="{{videoid}}">
-              </amp-youtube>
-              <amp-img src="{{url}}" layout="responsive" alt="{{title}}" height="533" width="830"></amp-img>
+
               <strong>{{title}}</strong>
-              <p>{{text}}</p>
+              <p>{{text-1}}</p>
+
+              <amp-img src="{{img}}" layout="responsive" alt="{{title}}" height="{{img-height}}" width="700"></amp-img>
+
+              <p>{{text-2}}</p>
+
+              <amp-video controls width="640" height="{{video-height}}" src="{{video}}" poster="{{poster}}" layout="responsive">
+                <div fallback>
+                  <p>This browser does not support the video element.</p>
+                </div>
+              </amp-video>
+
+              <amp-iframe width="640"
+                title="Турчинов обіцяє діяти проти сепаратистів «адекватно і рішуче»"
+                height="360"
+                layout="responsive"
+                sandbox="allow-scripts allow-same-origin allow-popups"
+                allowfullscreen
+                frameborder="0"
+                src="https://www.radiosvoboda.org/embed/player/0/25324092.html?type=video">
+              </amp-iframe>
+
+              <p>{{text-3}}</p>
+              <p><em>{{text-em}}</em></p>
+
             </div>
           </template>
+
           <div overflow
             role="button"
             aria-label="Show more"
             class="list-overflow ampstart-btn caps">
             Show more
           </div>
+
         </amp-list>
 
       </div>

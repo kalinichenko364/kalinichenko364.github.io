@@ -69,6 +69,9 @@ button {
   border: none;
   margin-left: 100px; }
 
+.i-amphtml-element > [overflow] {
+  margin-top: 0px; }
+
 .sidebar {
   background: #3c3e48;
   padding: 15px;
@@ -163,7 +166,8 @@ button {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column; }
+          flex-direction: column;
+  margin-top: 40px; }
   .postlist [role=list] amp-img {
     margin-top: 20px;
     margin-bottom: 20px; }

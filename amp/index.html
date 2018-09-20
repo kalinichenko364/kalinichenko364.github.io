@@ -5,9 +5,6 @@
     <title>Sample document</title>
     <link rel="canonical" href="./regular-html-version.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <style amp-custom>
-      
-    </style>
     <script type="application/ld+json">
     {
       "@context": "http://schema.org",
@@ -25,7 +22,7 @@
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
 
     <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
-    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script>
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
 
 
     <style amp-custom>
@@ -99,9 +96,6 @@ button {
   background: none;
   border: none; }
 
-.i-amphtml-element > [overflow] {
-  margin-top: 0px; }
-
 .sidebar {
   background: #3c3e48;
   padding: 15px;
@@ -133,7 +127,7 @@ button {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 400px;
-  background: url("../img/header-bg.jpg") no-repeat 50% 50%;
+  background: url("img/header-bg.jpg") no-repeat 50% 50%;
   background-size: cover; }
   .header-i {
     padding: 10px 10px 5px 10px;
@@ -284,7 +278,6 @@ button {
                 <feGaussianBlur result="blurOut" stdDeviation="1.414" />
                 <feFlood flood-color="rgb(0, 0, 0)" result="floodOut" />
                 <feComposite operator="atop" in="floodOut" in2="blurOut" />
-                <feComponentTransfer><feFuncA type="linear" slope="0.3"/></feComponentTransfer>
                 <feMerge>
                 <feMergeNode/>
                 <feMergeNode in="SourceGraphic"/>
@@ -312,7 +305,6 @@ button {
                 <feGaussianBlur result="blurOut" stdDeviation="1.414" />
                 <feFlood flood-color="rgb(0, 0, 0)" result="floodOut" />
                 <feComposite operator="atop" in="floodOut" in2="blurOut" />
-                <feComponentTransfer><feFuncA type="linear" slope="0.3"/></feComponentTransfer>
                 <feMerge>
                 <feMergeNode/>
                 <feMergeNode in="SourceGraphic"/>
